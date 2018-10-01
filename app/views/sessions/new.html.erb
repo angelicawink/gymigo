@@ -1,0 +1,18 @@
+<h1>Gymigo</h1>
+<br>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<%= form_for :login_attempt, url: login_path do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username%>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Log in" %>
+
+
+<% end %>

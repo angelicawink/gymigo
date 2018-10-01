@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_160738) do
+ActiveRecord::Schema.define(version: 2018_10_01_213009) do
 
   create_table "amigo_reviews", force: :cascade do |t|
     t.integer "user_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_160738) do
     t.text "goals"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password"
   end
 
   create_table "workouts", force: :cascade do |t|

@@ -1,0 +1,9 @@
+<% if !@logged %>
+  <%= 'You are not logged in!' %>
+  <%= link_to 'Please Login', login_path %>
+<% elsif @self_page %>
+  <p>Welcome back!</p>
+
+<% end %>
+
+<h1><%= @user.username %></h1>
