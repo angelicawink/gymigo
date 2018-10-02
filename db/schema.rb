@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_02_155034) do
+ActiveRecord::Schema.define(version: 2018_10_02_180433) do
 
   create_table "amigo_reviews", force: :cascade do |t|
     t.integer "user_id"
@@ -33,11 +33,12 @@ ActiveRecord::Schema.define(version: 2018_10_02_155034) do
   create_table "gyms", force: :cascade do |t|
     t.string "name"
     t.text "hours"
-    t.string "location"
+    t.string "address"
     t.text "rates"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "city"
+    t.string "zipcode"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,4 +1,21 @@
 <h1>Gyms#index</h1>
+
+<% if params[:q] %>
+<% if @gyms.empty? %>
+<%= "No gyms found in this zipcode." %>
+<% else %>
+<%= "Gyms in zipcode #{params[:q]}:"%>
+<% end %>
+<% end %><br><br>
+
+
 <% @gyms.each do |gym| %>
-<%= link_to gym.name, gym_path(gym) %>
+<%= link_to gym.name, gym_path(gym) %><br>
+<% end %><br><br>
+
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search by zipcode:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
 <% end %>
