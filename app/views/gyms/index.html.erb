@@ -1,0 +1,4 @@
+<h1>Gyms#index</h1>
+<% @gyms.each do |gym| %>
+<%= link_to gym.name, gym_path(gym) %>
+<% end %>

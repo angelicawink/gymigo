@@ -3,7 +3,11 @@
   <%= link_to 'Please Login', login_path %>
 <% elsif @self_page %>
   <p>Welcome back!</p>
-
 <% end %>
 
 <h1><%= @user.username %></h1>
+<%= link_to "view my profile", profile_path(@user) %> <br>
+<%= link_to "update profile", edit_user_path(@user) %><br>
+<%= link_to "workout menu", workout_menu_path(@user) %>
+<%= link_to "find a gym near me", gyms_path%>
+<%= link_to "logout", logout_path, method: :post %>
