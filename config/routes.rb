@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :workouts
-  get '/users/:id/workout_menu', to: 'workouts#menu', as: :workout_menu
+  get '/menu', to: 'workouts#menu', as: :menu
 
   resources :gyms, only: [:index, :show]
   get '/search', to: 'gyms#search'

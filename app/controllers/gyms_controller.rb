@@ -1,6 +1,7 @@
 class GymsController < ApplicationController
   def index
     @gyms = Gym.all
+    @user = User.find(session[:user_id])
   end
 
   def show
@@ -10,11 +11,13 @@ class GymsController < ApplicationController
   def search
     @gyms = []
     Gym.all.each do |gym|
-      if gym.zipcode == params[:q]
+      if params[:q] == "all"
+        @gyms = Gym.all
+      elsif gym.zipcode == params[:q]
         @gyms << gym
       end
     end
-    @gyms
+    @user = User.find(session[:user_id])
     render :index
   end
 end

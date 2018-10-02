@@ -1,5 +1,4 @@
 <h1>Gyms#index</h1>
-
 <% if params[:q] %>
 <% if @gyms.empty? %>
 <%= "No gyms found in this zipcode." %>
@@ -19,3 +18,6 @@
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
+*search "all" to show all gyms
+<br>
+<%= link_to "back to my page", user_path(@user) %>
