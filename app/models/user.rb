@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_secure_password
+  validates :username, uniqueness: true
+
   has_many :workouts_initiated, :foreign_key => "user_id", :class_name => "Workout"
   has_many :workouts_joined, :foreign_key => "amigo_id", :class_name => "Workout"
   has_many :gyms, through: :workouts
