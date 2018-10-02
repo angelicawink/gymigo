@@ -1,2 +1,6 @@
 welcome to workout menu!<br><br>
+
+<%= link_to "Create a Workout", new_workout_path(@user)%><br>
+<%= link_to "Join a Workout", join_workout_path %><br>
+<%= link_to "View my upcoming Workouts", upcoming_path %><br>
 <%= link_to "back to my page", user_path(@user)%>

@@ -1,0 +1,15 @@
+<%= form_for @workout do |f| %>
+  <%= f.label :start_time %>
+  <%= f.text_field :start_time %><br>
+
+  <%= f.label :end_time %>
+  <%= f.text_field :end_time %><br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %><br>
+
+  <%= f.label :gym %>
+  <%= f.collection_select :gym_id, Gym.all, :id, :name%><br>
+
+  <%= f.submit %>
+<% end %>

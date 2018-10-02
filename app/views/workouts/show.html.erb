@@ -1,0 +1,17 @@
+Workout Details
+
+Start Time:<%= @workout.start_time %><br><br>
+End Time: <%= @workout.end_time %><br><br>
+Gym: <%= @workout.gym.name %><br><br>
+Gym Address: <%= @workout.gym.address %><br><br>
+Workout Description: <%= @workout.description %><br><br>
+Workout Status: <%= @workout.status %><br><br>
+Created By: <%= @workout.user.username %><br><br>
+Joined By: <% if @workout.user_id == @workout.amigo_id %>
+  <%= 'No workout partner yet.' %>
+  <% else %>
+  <%= @workout.amigo.username %><br><br>
+  <% end %>
+<% if @workout.user_id == @workout.amigo_id && @workout.user_id != session[:user_id] %>
+    <%= button_to 'Join Workout', book_workout_path(@workout)%>
+<% end %>

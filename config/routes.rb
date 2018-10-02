@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :users
 
   resources :workouts
+  get '/join_workout', to: 'workouts#join_workout', as: :join_workout
+  post '/book_workout/:id', to: 'workouts#book_workout', as: :book_workout
+  get '/upcoming', to: 'workouts#upcoming', as: :upcoming
   get '/menu', to: 'workouts#menu', as: :menu
 
   resources :gyms, only: [:index, :show]
