@@ -1,11 +1,10 @@
 <h1>Gymigo</h1>
 <br>
-
 <% if flash[:notice] %>
   <%= flash[:notice] %>
 <% end %>
 
-<%= form_for :login_attempt, url: login_path do |f| %>
+<%= form_for :login_attempt, url: login_path, html: {class: "form-inline"} do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username%>
 
@@ -13,6 +12,7 @@
   <%= f.password_field :password %>
 
   <%= f.submit "Log in" %>
+
 
 
 <% end %>

@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_login
+  skip_before_action :require_login, only: [:new, :create]
+
   def new
     @user = User.new
   end
@@ -32,6 +35,7 @@ class UsersController < ApplicationController
   end
 
   def show
+  
     @user = User.find(params[:id])
     if !session[:user_id]
       #not logged in!
@@ -50,6 +54,10 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:username, :city, :experience, :goals, :password, :password_confirmation)
+  end
+
+  def require_login
+    return head(:forbidden) unless session.include? :user_id
   end
 
 end

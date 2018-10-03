@@ -8,9 +8,13 @@ Rails.application.routes.draw do
   post '/book_workout/:id', to: 'workouts#book_workout', as: :book_workout
   get '/upcoming', to: 'workouts#upcoming', as: :upcoming
   get '/menu', to: 'workouts#menu', as: :menu
+  post '/complete_workout/:id', to: 'workouts#complete_workout', as: :complete_workout
+  get '/completed', to: 'workouts#completed', as: :completed
+  get '/awaiting', to: 'workouts#awaiting', as: :awaiting
 
   resources :gyms, only: [:index, :show]
   get '/search', to: 'gyms#search'
+
 
   get '/', to: 'application#welcome'
   get    '/signup',  to: 'users#new'

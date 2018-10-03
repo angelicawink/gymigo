@@ -1,4 +1,6 @@
 class GymsController < ApplicationController
+  before_action :require_login
+
   def index
     @gyms = Gym.all
     @user = User.find(session[:user_id])
@@ -19,5 +21,10 @@ class GymsController < ApplicationController
     end
     @user = User.find(session[:user_id])
     render :index
+  end
+
+  private
+  def require_login
+    return head(:forbidden) unless session.include? :user_id
   end
 end

@@ -1,4 +1,5 @@
 class WorkoutsController < ApplicationController
+  before_action :require_login
 
   def menu
     @user = User.find(session[:user_id])
@@ -26,6 +27,7 @@ class WorkoutsController < ApplicationController
   end
 
   def book_workout
+    @user = User.find(session[:user_id])
     @workout = Workout.find(params[:id])
     @workout.status = 'booked'
     @workout.amigo_id = session[:user_id]
@@ -34,13 +36,31 @@ class WorkoutsController < ApplicationController
   end
 
   def upcoming
-    byebug
     @workouts = Workout.booked(session[:user_id])
     render :index
   end
 
+  def completed
+    @workouts = Workout.completed(session[:user_id])
+    render :index
+  end
+
+  def awaiting
+    @workouts = Workout.completed(session[:user_id])
+    render :index
+  end
+
   def show
+    @user = User.find(session[:user_id])
     @workout = Workout.find(params[:id])
+  end
+
+  def complete_workout
+    @user = User.find(session[:user_id])
+    @workout = Workout.find(params[:id])
+    @workout.status = 'completed'
+    @workout.save
+    render :show
   end
 
   def edit
@@ -53,5 +73,9 @@ class WorkoutsController < ApplicationController
 
   def workout_params
     params.require(:workout).permit(:start_time, :end_time, :description, :gym_id, :user_id, :amigo_id, :status)
+  end
+
+  def require_login
+    return head(:forbidden) unless session.include? :user_id
   end
 end

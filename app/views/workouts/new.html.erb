@@ -1,15 +1,28 @@
+<div class="container">
 <%= form_for @workout do |f| %>
+  <div class="form-group">
   <%= f.label :start_time %>
   <%= f.text_field :start_time %><br>
+</div>
 
-  <%= f.label :end_time %>
-  <%= f.text_field :end_time %><br>
+<div class="form-group">
+  <%= f.label :end_time, class: "form-text" %>
+  <%= f.text_field :end_time, class: "form-control" %><br>
+</div>
 
-  <%= f.label :description %>
-  <%= f.text_area :description %><br>
+  <div class="form-group">
+  <%= f.label :description, class: "form-text" %>
+  <%= f.text_area :description, class: "form-control"  %><br>
+</div>
 
-  <%= f.label :gym %>
-  <%= f.collection_select :gym_id, Gym.all, :id, :name%><br>
+  <div class="form-group">
+  <%= f.label :gym, class: "form-text" %>
+  <%= f.collection_select :gym_id, Gym.all, :id, :name, class: "form-control" %><br>
+</div>
 
+  <div class="form-group">
   <%= f.submit %>
+</div>
+
 <% end %>
+</div>
