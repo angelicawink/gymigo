@@ -1,5 +1,7 @@
 class GymsController < ApplicationController
   before_action :require_login
+  layout 'application'
+  
 
   def index
     @gyms = Gym.all

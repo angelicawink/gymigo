@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <a class="navbar-brand" href="#">gymigo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/<%=session[:user_id]%>/profile">My Profile<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/gyms">Find a Gym<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Workout Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/workouts/new">Create a Workout</a>
+          <a class="dropdown-item" href="/join_workout">Join a Workout</a>
+          <a class="dropdown-item" href="/upcoming">My upcoming Workouts</a>
+        <a class="dropdown-item" href="/completed">My completed Workouts</a>
+        <a class="dropdown-item" href="/awaiting">Workouts I need a partner for.</a>
+      </div>
+      <li class="nav-item active">
+        <a class="nav-link"><%= link_to 'Logout', logout_path, method: :post %><span class="sr-only">(current)</span></a>
+      </li>
+
+  </div>
+</nav>

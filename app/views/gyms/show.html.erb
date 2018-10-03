@@ -1,1 +1,13 @@
-<%= @gym.name %> Page!
+<div class="container">
+<h1 class="text-center">
+  <div class="text-warning"><%= @gym.name %> </div></h1>
+<p class="text-center"><%= @gym.address + ", " + @gym.city + " " + @gym.zipcode%></p><br><br>
+  <p class="text-left">
+    <div class="text-warning">
+      <div class="font-italic">OPEN: </div></div><%= @gym.hours%><br>
+  </p>
+<p class="text-left">
+    <div class="text-warning">
+  <div class="font-italic">RATES: </div></div><%= @gym.rates%>
+</p>
+</div>

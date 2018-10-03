@@ -9,7 +9,7 @@
 
 
 <% @gyms.each do |gym| %>
-<%= link_to gym.name, gym_path(gym) %><br>
+<a href="<%=gym_path(gym)%>" class="badge badge-warning"><%=gym.name%></a><br>
 <% end %><br><br>
 
 
@@ -19,5 +19,3 @@
   <%= submit_tag("Search") %>
 <% end %>
 *search "all" to show all gyms
-<br>
-<%= link_to "back to my page", user_path(@user) %>

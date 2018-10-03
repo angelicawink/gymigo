@@ -26,6 +26,3 @@ Joined By: <% if @workout.user_id == @workout.amigo_id %>
 <% if @workout.user_id == @workout.amigo_id && @workout.user_id != session[:user_id] %>
     <%= button_to 'Join Workout', book_workout_path(@workout)%>
 <% end %>
-<br><br>
-<%= link_to "workout menu", menu_path(@user)%><br>
-<%= link_to "my page", user_path(@user)%>

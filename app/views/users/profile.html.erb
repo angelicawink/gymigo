@@ -6,6 +6,4 @@ my experience level: <%= @user.experience %><br>
 my goals: <%= @user.goals %><br>
 <br>
 
-<%= link_to "update profile", edit_user_path(@user) %><br>
-<%= link_to "back to my page", user_path(@user)%>
-</div>
+<a class="btn btn-primary" href="/users/<%=session[:user_id]%>/edit" role="button">Edit Profile</a>

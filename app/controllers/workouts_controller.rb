@@ -1,5 +1,7 @@
 class WorkoutsController < ApplicationController
   before_action :require_login
+  layout 'application'
+  
 
   def menu
     @user = User.find(session[:user_id])
