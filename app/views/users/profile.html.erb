@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Profile</h1> <br>
 my username: <%= @user.username %><br>
 my city: <%= @user.city %><br>
@@ -7,3 +8,4 @@ my goals: <%= @user.goals %><br>
 
 <%= link_to "update profile", edit_user_path(@user) %><br>
 <%= link_to "back to my page", user_path(@user)%>
+</div>

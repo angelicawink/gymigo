@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_login
   skip_before_action :require_login, only: [:new, :create]
+  layout 'application'
 
   def new
     @user = User.new
@@ -35,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  
+
     @user = User.find(params[:id])
     if !session[:user_id]
       #not logged in!
