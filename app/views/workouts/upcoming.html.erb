@@ -1,7 +1,10 @@
-Workouts<br><br>
-
-Click on a workout to view details: <br><br>
+<br>
+<div class="upcoming_body">
 <% @workouts.each do |workout| %>
-  <li> <%= link_to workout.description, workout_path(workout) %></li><br>
 
+  <div class="gym-info"><%= link_to workout.description, workout_path(workout) %></div><br>
+  with: <div class="gym-info"><%=workout.amigo.username%></div><br>
+  on: <div class="gym-info"><%=workout.date%></div>
 <% end %>
+<br>
+</div>

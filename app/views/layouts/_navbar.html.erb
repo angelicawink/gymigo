@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
- <a class="navbar-brand" style="margin-left: 125px; width: 285px;" href="#">GYMigo</a>
+ <a class="navbar-brand" style="margin-left: 125px; width: 285px;" href="#"><div class="nav_text">GYMigo</div></a>
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
    <span class="navbar-toggler-icon"></span>
  </button>
@@ -7,15 +7,15 @@
  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
    <ul class="navbar-nav mr-auto">
      <li class="nav-item active">
-       <a class="nav-link" style="width: 150px;" href="/users/<%=session[:user_id]%>/profile">My Profile<span class="sr-only">(current)</span></a>
+       <a class="nav-link" style="width: 150px;" href="/users/<%=session[:user_id]%>/profile"><div class="nav-page">My Profile</div><span class="sr-only">(current)</span></a>
      </li>
      <li class="nav-item active">
-       <a class="nav-link" style="width: 150px;" href="/gyms">Find a Gym<span class="sr-only">(current)</span></a>
+       <a class="nav-link" style="width: 150px;" href="/gyms"><div class="nav-page">Find a Gym</div><span class="sr-only">(current)</span></a>
      </li>
 
      <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle" style="width: 400px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Workout Menu
+       <a class="nav-link dropdown-toggle" style="width: 400px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="nav-page">
+         Workout Menu</div>
        </a>
        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
          <a class="dropdown-item" href="/workouts/new">Create a Workout</a>

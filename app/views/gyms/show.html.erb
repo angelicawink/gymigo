@@ -1,13 +1,11 @@
+<br>
 <div class="container">
-<h1 class="text-center">
-  <div class="text-warning"><%= @gym.name %> </div></h1>
-<p class="text-center"><%= @gym.address + ", " + @gym.city + " " + @gym.zipcode%></p><br><br>
-  <p class="text-left">
-    <div class="text-warning">
-      <div class="font-italic">OPEN: </div></div><%= @gym.hours%><br>
-  </p>
-<p class="text-left">
-    <div class="text-warning">
-  <div class="font-italic">RATES: </div></div><%= @gym.rates%>
-</p>
+<h1 class="gym_header">
+  <div class="text-warning"><%= @gym.name %> <div class="gym-address"><%= @gym.address + ", " + @gym.city + " " + @gym.zipcode%></div></div></h1>
+<p><div class="gym_body">
+  <br>
+OPEN: <div class="gym-info"><%= @gym.hours%></div><br>
+
+  RATES: <div class="gym-info"><%= @gym.rates%></div><br>
+</div>
 </div>

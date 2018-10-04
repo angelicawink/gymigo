@@ -50,7 +50,7 @@ class WorkoutsController < ApplicationController
 
   def awaiting
     @workouts = Workout.completed(session[:user_id])
-    render :index
+    render :requested
   end
 
   def show
