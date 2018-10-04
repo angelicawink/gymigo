@@ -1,0 +1,8 @@
+show gym review
+<%= @gym_review.gym.name%><br>
+rating: <%= @gym_review.rating %><br>
+<% if !@gym_review.description.empty?%>
+comment: <%= @gym_review.description%>
+<% end %>
+<br><br>
+<%= link_to "return to my completed workouts", completed_path%>

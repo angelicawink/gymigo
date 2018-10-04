@@ -8,6 +8,12 @@ class User < ApplicationRecord
   has_many :gym_reviews
   has_many :amigo_reviews
 
+  def my_reviews
+    GymReview.all.select do |review|
+      review.user_id == session[:user_id]
+    end
+  end
+
   def all_workouts
     all = []
     all << self.workouts_joined
