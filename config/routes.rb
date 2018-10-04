@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
 
+
   resources :workouts
   get '/join_workout', to: 'workouts#join_workout', as: :join_workout
   post '/book_workout/:id', to: 'workouts#book_workout', as: :book_workout
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :gyms, only: [:index, :show]
   get '/search', to: 'gyms#search'
+  post '/gyms/:id/add_review', to: 'gyms#add_review'
 
 
   get '/', to: 'application#welcome'
