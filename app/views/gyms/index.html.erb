@@ -1,23 +1,53 @@
 <div class='container'>
-  <h1>Gym Index</h1>
-<% if params[:q] %>
-<% if @gyms.empty? %>
-<%= "No gyms found in this zipcode." %>
-<% else %>
-<%= "Gyms in zipcode #{params[:q]}:"%>
-<% end %>
-<% end %><br><br>
+  <!-- <div class="row"> -->
+    <div class="col-20">
+      Enter zipcode or 'all' to show all gyms in Search.
+    </div>
+
+    <div class='container'>
+
+    <div class="col-4">
+      <h2>Gym Index</h2>
+        <% if params[:q] %>
+        <% if @gyms.empty? %>
+        <%= "No gyms found in this zipcode." %>
+        <% else %>
+        <%= "Gyms in zipcode #{params[:q]}:"%>
+        <% end %>
+        <% end %>
+    </div>
 
 
-<% @gyms.each do |gym| %>
-<a href="<%=gym_path(gym)%>" class="badge badge-warning"><%=gym.name%></a><br>
-<% end %><br><br>
+  <!-- </div> -->
+
+  <div class="col-6">
+    <% @gyms.each do |gym| %>
+    <a href="<%=gym_path(gym)%>" class="badge badge-warning"><%=gym.name%></a>
+    <% end %><br><br>
+  </div>
 
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search by zipcode:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search", class: "btn btn-warning") %>
-<% end %>
-*search "all" to show all gyms
+
+  <div class="col-5">
+    <%= form_tag("/search", method: "get") do %>
+      <!-- <%= label_tag(:q, "Enter zipcode or 'all' to show all gyms in Search.") %> -->
+      <%= text_field_tag(:q, "Search by zipcode.") %>
+      <%= submit_tag("Search", class: "btn btn-warning") %>
+    <% end %>
+  </div>
+
+</div>
+
+
+
+
+
+    <!-- <div class="col-3.5">
+      Enter zipcode or 'all' to show all gyms in Search.
+    </div> -->
+
+
+
+
+  </div>
 </div>

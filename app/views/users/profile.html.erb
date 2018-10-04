@@ -1,9 +1,32 @@
 <div class="container">
-<h1>Profile</h1> <br>
-my username: <%= @user.username %><br>
-my city: <%= @user.city %><br>
-my experience level: <%= @user.experience %><br>
-my goals: <%= @user.goals %><br>
+  <h1>Profile</h1> <br>
+    <div class="container">
+      <h6></span>
+        <div class="container">
+
+
+              <div class="col-10">
+                <br>
+                my username: <%= @user.username %><br><br>
+              </div>
+              <div class="col-10">
+                my city: <%= @user.city %><br><br>
+              </div>
+
+
+              <div class="col-10">
+                my experience level: <%= @user.experience %><br><br>
+              </div>
+              <div class="col-10">
+                my goals: <%= @user.goals %><br><br>
+              </div>
+
+
+        </div>
+      </span></h6>
+    </div>
+  </div>
+
 <br>
 
 <a class="btn btn-warning" href="/users/<%=session[:user_id]%>/edit" role="button">Edit Profile</a>
