@@ -1,0 +1,5 @@
+body {
+    background-color: lightgrey;
+    background-image: image-url('gym_pic_1.jpg');
+    // background-image: url(<%= asset_path 'background.jpg' %>);
+}
