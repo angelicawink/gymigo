@@ -19,9 +19,11 @@ rate <%=workout.gym.name%>
 <label for="rating1"></label>
 </span><br>
 comment:
-<%= text_area_tag "amigo_review[description]" %><br>
+<%= text_area_tag "gym_review[description]" %><br>
 <input type="submit" value="submmit review">
 <% end %><br><br>
+
+
 <%= form_tag("/amigo_reviews") do %>
 <input type="hidden" name="amigo_review[amigo_id]" value="<%=workout.amigo_id%>">
 rate <%=workout.amigo.username%>

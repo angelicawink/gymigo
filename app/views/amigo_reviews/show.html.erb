@@ -1,0 +1,7 @@
+<%= @amigo_review.amigo.username.upcase%> REVIEW<br><br>
+
+reviewed by: <%= @amigo_review.user.username%><br>
+rating: <%= @amigo_review.rating%><br>
+comments: <%= @amigo_review.description%><br><br>
+
+<%= link_to "return to my completed workouts", completed_path%>
