@@ -3,7 +3,6 @@ class GymReviewsController < ApplicationController
 
 
   def create
-    
     @gym_review = GymReview.new(gym_review_params)
     @gym_review.user_id = session[:user_id]
     @gym_review.gym_id = params[:gym_review][:gym_id]
@@ -18,7 +17,7 @@ class GymReviewsController < ApplicationController
 
   private
   def gym_review_params
-    params.require(:gym_review).permit(:rating, :description, :user_id)
+    params.require(:gym_review).permit(:rating, :description, :user_id, :workout_id)
   end
 
 end

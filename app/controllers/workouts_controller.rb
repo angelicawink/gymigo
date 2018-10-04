@@ -43,7 +43,8 @@ class WorkoutsController < ApplicationController
   end
 
   def completed
-    @workouts = Workout.completed(session[:user_id])
+    @user = User.find(session[:user_id])
+    @workouts = @user.completed
     render :completed
   end
 

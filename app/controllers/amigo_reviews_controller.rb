@@ -1,7 +1,6 @@
 class AmigoReviewsController < ApplicationController
 
   def create
-    byebug
     @amigo_review = AmigoReview.new(amigo_review_params)
     @amigo_review.user_id = session[:user_id]
     @amigo_review.save
@@ -19,6 +18,6 @@ class AmigoReviewsController < ApplicationController
   private
 
   def amigo_review_params
-    params.require(:amigo_review).permit(:amigo_id, :user_id, :rating, :description)
+    params.require(:amigo_review).permit(:amigo_id, :user_id, :rating, :description, :workout_id)
   end
 end
