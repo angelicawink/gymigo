@@ -5,22 +5,32 @@
 <p class="p-3 mb-2 bg-warning text-dark"><%= link_to "Login", login_path %> / <%= link_to "Sign up", signup_path %></p>
 </div> -->
 
-<div class="container">
-  <br>
-  <br>
-  <div class="p-3 mb-2 bg-warning text-dark">
-  <div class="row">
-    <div class="col-sm">
-      <h1>GYMigo</h1>
-    </div>
 
-    <div class="col-sm"><h4>
-      <%= link_to "Login", login_path %><h4>
+<div class="p-3 mb-2 bg-warning text-dark">
+  <div class="form-group">
+    <div class="container">
+    <div class="row">
+
+      <div class="col-7">
+        <h1>GYMigo</h1>
+      </div>
+
+      <div class="col-2"><h4>
+        <br>
+        <h3><%= link_to "Login", login_path %></h3>
+      </div>
+
+      <div class="col-2"><h4>
+        <br>
+        <h3><%= link_to "Sign up", signup_path %></h3>
+      </div>
+
+      <div class='container'>
+      <div class="col-12"><h4>
+        Find workout partners, and gyms in your area!
+      </h4></div>
     </div>
-    <div class="col-sm"><h4>
-      <%= link_to "Sign up", signup_path %><h4>
     </div>
-  </h4>
   </div>
-</div>
+  </div>
 </div>

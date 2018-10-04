@@ -1,30 +1,40 @@
-<div class="container">
-<%= form_for @workout do |f| %>
-  <div class="form-group">
-  <%= f.label :start_time, class: "form-text"  %>
-  <%= f.text_field :start_time, class: "form-control" %>
-</div>
+<div class="whole_page">
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <h6>
+      <%= form_for @workout do |f| %>
+        <div class="form-group">
+          <%= f.label :start_time, class: "form-text"  %>
+          <%= f.text_field :start_time, class: "form-control" %>
+        </div>
 
-<div class="form-group">
-  <%= f.label :end_time, class: "form-text" %>
-  <%= f.text_field :end_time, class: "form-control" %>
-</div>
+        <div class="form-group">
+          <%= f.label :end_time, class: "form-text" %>
+          <%= f.text_field :end_time, class: "form-control" %>
+        </div>
 
-  <div class="form-group">
-  <%= f.label :description, class: "form-text" %>
-  <%= f.text_area :description, class: "form-control"  %>
-</div>
+        <div class="form-group">
+          <%= f.label :description, class: "form-text" %>
+          <%= f.text_area :description, class: "form-control"  %>
+        </div>
 
-  <div class="form-group">
-  <%= f.label :gym, class: "form-text" %>
-  <%= f.collection_select :gym_id, Gym.all, :id, :name, class: "form-control" %>
-</div>
+        <div class="form-group">
+          <%= f.label :gym, class: "form-text" %>
+          <%= f.collection_select :gym_id, Gym.all, :id, :name, class: "form-control" %>
+        </div>
 
-  <div class="form-group">
+        </h6>
+        <br>
+        <br>
 
-  <%= f.submit :'Create Workout', class: "btn btn-warning" %>
-  </div>
-</div>
+        <div class="form-group">
+          <%= f.submit :'Create Workout', class: "btn btn-warning" %>
+        </div>
+      </div>
 
-<% end %>
+      <% end %>
+
+      </div>
 </div>

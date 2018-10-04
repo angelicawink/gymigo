@@ -1,17 +1,28 @@
-<h1>Gymigo</h1>
-<% if @user.errors.any? %>
-There were some errors:<br>
-<% @user.errors.full_messages.each do |message| %>
-<%= message %>
-<% end %>
-<% end %>
+<div class="whole_page">
+  <br>
+  <h1>GYMigo</h1>
+  <% if @user.errors.any? %>
+  There were some errors:<br>
+  <% @user.errors.full_messages.each do |message| %>
+  <%= message %>
+  <% end %>
+  <% end %>
 
-<%= form_for @user do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %><br>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %><br>
-<%= f.submit "sign up!" %>
-<% end %>
+  <div class="container">
+    <div class = "form-group">
+
+        <%= form_for @user do |f| %>
+        <h6></span>
+        <%= f.label :username, class: "form-text" %>
+        <%= f.text_field :username, class: "form-control" %><br>
+        <%= f.label :password, class: "form-text" %>
+        <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :password_confirmation, class: "form-text" %>
+        <%= f.password_field :password_confirmation, class: "form-control" %><br>
+        </span></h6>
+        <%= f.submit :'Sign up!', class: "btn btn-warning" %>
+        <% end %>
+
+    </div>
+  </div>
+</div>
