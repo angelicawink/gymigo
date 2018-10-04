@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
 
+  resources :amigo_reviews
 
   resources :workouts
   get '/join_workout', to: 'workouts#join_workout', as: :join_workout

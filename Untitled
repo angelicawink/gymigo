@@ -1,0 +1,13 @@
+<!-- <% if !@user.reviewed_gym_for_this_workout?(workout.id).empty?%>
+YOU REVIEWED THIS GYM!<br>
+rating: <%=@user.reviewed_gym_for_this_workout?(workout.id).first.rating%><br>
+comment: <%=@user.reviewed_gym_for_this_workout?(workout.id).first.description%><br>
+<% else %> -->
+
+
+
+<!-- <% if !@user.reviewed_amigo_for_this_workout?(workout.id).empty?%>
+YOU REVIEWED THIS AMIGO!<br>
+rating: <%=@user.reviewed_amigo_for_this_workout?(workout.id).first.rating%><br>
+comment: <%=@user.reviewed_amigo_for_this_workout?(workout.id).first.description%><br>
+<% else %> -->
