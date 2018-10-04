@@ -39,12 +39,12 @@ class WorkoutsController < ApplicationController
 
   def upcoming
     @workouts = Workout.booked(session[:user_id])
-    render :index
+    render :upcoming
   end
 
   def completed
     @workouts = Workout.completed(session[:user_id])
-    render :index
+    render :completed
   end
 
   def awaiting

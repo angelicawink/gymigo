@@ -1,0 +1,7 @@
+Workouts<br><br>
+
+Click on a workout to view details: <br><br>
+<% @workouts.each do |workout| %>
+  <li> <%= link_to workout.description, workout_path(workout) %></li><br>
+
+<% end %>

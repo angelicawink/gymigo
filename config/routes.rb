@@ -15,7 +15,8 @@ Rails.application.routes.draw do
 
   resources :gyms, only: [:index, :show]
   get '/search', to: 'gyms#search'
-  post '/gyms/:id/add_review', to: 'gyms#add_review'
+
+  resources :gym_reviews
 
 
   get '/', to: 'application#welcome'

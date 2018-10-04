@@ -1,0 +1,46 @@
+Workouts<br><br>
+
+Click on a workout to view details: <br><br>
+<% @workouts.each do |workout| %>
+  <li><%= link_to workout.description, workout_path(workout) %><br>
+<%= form_tag("/gym_reviews") do %>
+<input type="hidden" name="gym_review[gym_id]" value="<%=workout.gym_id%>">
+rate <%=workout.gym.name%>
+<span class="starRating">
+5<input id="rating5" type="radio" name="gym_review[rating]" value="5" class="fa fa-star">
+<label for="rating5"></label>
+4<input id="rating4" type="radio" name="gym_review[rating]" value="4" class="fa fa-star">
+<label for="rating4"></label>
+3<input id="rating3" type="radio" name="gym_review[rating]" value="3" class="fa fa-star">
+<label for="rating3"></label>
+2<input id="rating2" type="radio" name="gym_review[rating]" value="2" class="fa fa-star">
+<label for="rating2"></label>
+1<input id="rating1" type="radio" name="gym_review[rating]" value="1" class="fa fa-star">
+<label for="rating1"></label>
+</span><br>
+comment:
+<%= text_area_tag "amigo_review[description]" %><br>
+<input type="submit" value="submmit review">
+<% end %><br><br>
+<%= form_tag("/amigo_reviews") do %>
+<input type="hidden" name="amigo_review[amigo_id]" value="<%=workout.amigo_id%>">
+rate <%=workout.amigo.username%>
+<span class="starRating">
+5<input id="rating5" type="radio" name="amigo_review[rating]" value="5" class="fa fa-star">
+<label for="rating5"></label>
+4<input id="rating4" type="radio" name="amigo_review[rating]" value="4" class="fa fa-star">
+<label for="rating4"></label>
+3<input id="rating3" type="radio" name="amigo_review[rating]" value="3" class="fa fa-star">
+<label for="rating3"></label>
+2<input id="rating2" type="radio" name="amigo_review[rating]" value="2" class="fa fa-star">
+<label for="rating2"></label>
+1<input id="rating1" type="radio" name="amigo_review[rating]" value="1" class="fa fa-star">
+<label for="rating1"></label>
+</span><br>
+comment:
+<%= text_area_tag "amigo_review[description]" %><br>
+<input type="submit" value="submmit review">
+<% end %>
+</li>
+
+<% end %>
