@@ -1,4 +1,5 @@
-<h1>Gyms#index</h1>
+<div class='container'>
+  <h1>Gym Index</h1>
 <% if params[:q] %>
 <% if @gyms.empty? %>
 <%= "No gyms found in this zipcode." %>
@@ -16,6 +17,7 @@
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Search by zipcode:") %>
   <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+  <%= submit_tag("Search", class: "btn btn-warning") %>
 <% end %>
 *search "all" to show all gyms
+</div>

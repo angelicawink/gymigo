@@ -17,7 +17,7 @@ class Workout < ApplicationRecord
 
   def self.completed(user_id)
     Workout.all.select do |workout|
-      workout.status = "completed" && (workout.user_id == user_id || workout.amigo_id == user_id)
+      workout.status == "completed" && (workout.user_id == user_id || workout.amigo_id == user_id)
     end
   end
 

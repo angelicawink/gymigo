@@ -1,18 +1,33 @@
-<h1>Gymigo</h1>
-<br>
-<% if flash[:notice] %>
-  <%= flash[:notice] %>
-<% end %>
+<div class="container">
+  <div class="p-3 mb-2 bg-warning text-dark">
+        <div class="row">
+            <div class="col-3">
+            <h1>GYMigo</h1>
 
-<%= form_for :login_attempt, url: login_path, html: {class: "form-inline"} do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username%>
+            <% if flash[:notice] %>
+              <%= flash[:notice] %>
+            <% end %>
+          </div>
+              <%= form_for :login_attempt, url: login_path, html: {class: "form-inline"} do |f| %>
+                <div class="col-5">
+                  <div class="form-group">
+                  <%= f.label :username, class: "form-text" %>
+                  <%= f.text_field :username, class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="form-group">
+                  <%= f.label :password, class: "form-text" %>
+                  <%= f.password_field :password, class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                    <%= f.submit :'Login', class: "btn btn-light"  %>
+                    </div>
+                </div>
+              <% end %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit "Log in" %>
-
-
-
-<% end %>
+        </div>
+  </div>
+</div>

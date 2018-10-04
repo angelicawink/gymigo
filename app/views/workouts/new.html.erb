@@ -1,28 +1,28 @@
 <div class="container">
 <%= form_for @workout do |f| %>
   <div class="form-group">
-  <%= f.label :start_time %>
-  <%= f.text_field :start_time %><br>
+  <%= f.label :start_time, class: "form-text"  %>
+  <%= f.text_field :start_time, class: "form-control" %>
 </div>
 
 <div class="form-group">
   <%= f.label :end_time, class: "form-text" %>
-  <%= f.text_field :end_time, class: "form-control" %><br>
+  <%= f.text_field :end_time, class: "form-control" %>
 </div>
 
   <div class="form-group">
   <%= f.label :description, class: "form-text" %>
-  <%= f.text_area :description, class: "form-control"  %><br>
+  <%= f.text_area :description, class: "form-control"  %>
 </div>
 
   <div class="form-group">
   <%= f.label :gym, class: "form-text" %>
-  <%= f.collection_select :gym_id, Gym.all, :id, :name, class: "form-control" %><br>
+  <%= f.collection_select :gym_id, Gym.all, :id, :name, class: "form-control" %>
 </div>
 
   <div class="form-group">
 
-  <%= f.submit :'Create Workout', class: "btn btn-primary" %>
+  <%= f.submit :'Create Workout', class: "btn btn-warning" %>
   </div>
 </div>
 
