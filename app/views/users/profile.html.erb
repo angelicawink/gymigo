@@ -1,34 +1,20 @@
 <div class="whole_page">
   <br>
-  <h1>My Profile</h1> <br>
-    <div class="container">
-      <h6></span>
-        <div class="container">
+  <div class="page_header"
+  <h1>My Profile</h1></div>
+
+        <br>
+
+          <br>
+          <div class="body">
+          my username: <div class="profile_data"><%= @user.username %></div><br>
+          my city: <div class="profile_data"><%= @user.city %></div><br>
 
 
-              <div class="col-10">
-                <br>
-                my username: <%= @user.username %><br><br>
-              </div>
-              <div class="col-10">
-                my city: <%= @user.city %><br><br>
-              </div>
-
-
-              <div class="col-10">
-                my experience level: <%= @user.experience %><br><br>
-              </div>
-              <div class="col-10">
-                my goals: <%= @user.goals %><br><br>
-              </div>
-
-
-        </div>
-      </span></h6>
-
-<br>
-
-<a class="btn btn-warning" href="/users/<%=session[:user_id]%>/edit" role="button">Edit Profile</a>
-
+          my experience level: <div class="profile_data"><%= @user.experience %></div><br>
+          my goals: <div class="profile_data"><%= @user.goals %></div><br>
 </div>
+
+<br><br>
+<a class="btn btn-danger" href="/users/<%=session[:user_id]%>/edit" role="button">Edit Profile</a>
 </div>

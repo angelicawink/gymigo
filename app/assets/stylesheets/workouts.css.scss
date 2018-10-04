@@ -10,24 +10,28 @@
 
 .page_header{
     // display:inline;
-    display: inline-block;
-    padding: 0.5em 0.2em 0.8em 0.5em;
+    display: center;
+    padding: 0.5em 0.2em 0.5em 0.2em;
     border-radius: 30px;
-    background-color: #ffc107;
+    background-color: crimson;
     text-align: center;
-    color:black;
-    width: 85%
+    color:gold;
+    font-family: "Andale Mono";
+    width: auto;
+    font-size: 25px
 }
 
-.workout{
+.body{
     // display:inline;
-    display: inline-block;
-    padding: 0.5em 0.2em 0.8em 0.5em;
+    display: center;
+    padding: 0.5em 0.2em 0.5em;
     border-radius: 30px;
     background-color: #ffc107;
     text-align: center;
     color:black;
-    width: 85%
+    font-family: "Andale Mono";
+    font-size: 15px;
+    width: auto
 }
 
 h1{
@@ -47,9 +51,74 @@ h1{
 
 
 .workout_header{
-  font-size: 20px
+  font-size: 20px;
 }
 
 .review_form{
   font-size: 12px
+}
+
+.text{
+  font-size: 15px;
+  color: crimson;
+}
+
+.profile_data{
+  font-size: 20px;
+  font-style: bold;
+  color: red;
+}
+
+.nav_text{
+  color: crimson;
+  font-size: 30px;
+  font-family: "Andale Mono";
+  height: 40px;
+  line-height: 40px;
+}
+
+.nav-page{
+  font-family: "Andale Mono";
+  height: 40px;
+  line-height: 40px;
+  color: crimson;
+}
+
+a{
+  color: crimson;
+  height: 40px;
+  line-height: 40px;
+}
+
+.nav-options{
+
+}
+
+
+.dropdown-menu{
+  background-color: crimson;
+}
+
+.dropdown-menu a{
+  color: gold;
+}
+
+.logout{
+  font-family: "Andale Mono";
+  text-decoration: none;
+  background-color: white;
+  color: gold;
+  padding: 8px 8px 8px 8px;
+  border-top: 3px;
+  border-right: 3px;
+  border-bottom: 3px;
+  border-left: 3px;
+  display: inline;
+  font-size: 20px;
+  border-radius: 30px;
+  align-self: center;
+}
+
+.logout a{
+  color: crimson;
 }
