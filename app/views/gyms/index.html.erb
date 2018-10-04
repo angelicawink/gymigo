@@ -1,13 +1,10 @@
 <div class='container'>
   <!-- <div class="row"> -->
-    <div class="col-20">
-      Enter zipcode or 'all' to show all gyms in Search.
-    </div>
+
 
     <div class='container'>
 
     <div class="col-4">
-      <h2>Gym Index</h2>
         <% if params[:q] %>
         <% if @gyms.empty? %>
         <%= "No gyms found in this zipcode." %>
@@ -31,7 +28,7 @@
   <div class="col-5">
     <%= form_tag("/search", method: "get") do %>
       <!-- <%= label_tag(:q, "Enter zipcode or 'all' to show all gyms in Search.") %> -->
-      <%= text_field_tag(:q, "Search by zipcode.") %>
+      <%= text_field_tag(:q, "search by zipcode") %>
       <%= submit_tag("Search", class: "btn btn-warning") %>
     <% end %>
   </div>

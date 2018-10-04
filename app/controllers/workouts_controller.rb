@@ -25,7 +25,7 @@ class WorkoutsController < ApplicationController
 
   def join_workout
     @workouts = Workout.requested
-    render :index
+    render :join_workout
   end
 
   def book_workout

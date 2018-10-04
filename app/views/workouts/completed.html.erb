@@ -1,8 +1,10 @@
-Workouts<br><br>
-
-Click on a workout to view details: <br><br>
+<div class = "whole_page">
+  <br>
+<div class = "page_header"><h2>My Completed Workouts<h2></div><br><br>
 <% @workouts.each do |workout| %>
-  <li><%= link_to workout.description, workout_path(workout) %><br>
+<div class="workout">
+  <div class="workout_header"><%=workout.date%>: <%= link_to workout.description, workout_path(workout) %> </div><br>
+  <div class="review_form">
     <%= form_tag("/gym_reviews") do %>
       <input type="hidden" name="gym_review[gym_id]" value="<%=workout.gym_id%>">
       <input type="hidden" name="gym_review[workout_id]" value="<%=workout.id%>">
@@ -46,6 +48,8 @@ Click on a workout to view details: <br><br>
     <%= text_area_tag "amigo_review[description]" %><br>
     <input type="submit" value="submit review">
   <% end %>
-  </li>
+</div>
+</div><br><br>
 
 <% end %>
+</div>

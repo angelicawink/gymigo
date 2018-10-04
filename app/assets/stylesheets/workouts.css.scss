@@ -1,3 +1,55 @@
 // Place all the styles related to the Workouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.whole_page{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+
+.page_header{
+    // display:inline;
+    display: inline-block;
+    padding: 0.5em 0.2em 0.8em 0.5em;
+    border-radius: 30px;
+    background-color: #ffc107;
+    text-align: center;
+    color:black;
+    width: 85%
+}
+
+.workout{
+    // display:inline;
+    display: inline-block;
+    padding: 0.5em 0.2em 0.8em 0.5em;
+    border-radius: 30px;
+    background-color: #ffc107;
+    text-align: center;
+    color:black;
+    width: 85%
+}
+
+h1{
+  // display:inline;
+  display: inline-block;
+  padding: 0.5em 0.2em 0.8em 0.5em;
+  border-radius: 20px;
+  background-color: #ffc107;
+  text-align: center;
+  color:black;
+}
+
+.subtext{
+  text-align: center;
+  font-size: 13px;
+}
+
+
+.workout_header{
+  font-size: 20px
+}
+
+.review_form{
+  font-size: 12px
+}
