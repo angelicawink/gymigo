@@ -47,4 +47,10 @@ class User < ApplicationRecord
     end
   end
 
+  def reviews
+    AmigoReview.all.select do |review|
+      review.amigo_id == self.id
+    end
+  end
+
 end

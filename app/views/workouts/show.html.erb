@@ -1,4 +1,4 @@
-Workout Details
+<br>
 <div class="workout_show">
 Start Time:<%= @workout.start_time %><br><br>
 End Time: <%= @workout.end_time %><br><br>
@@ -14,7 +14,7 @@ Created By:
  <% if @workout.user_id == session[:user_id]%>
 <%= "Me" %>
 <% else%>
-<%= @workout.user.username %>
+<%= link_to @workout.user.username, user_path(@workout.user) %>
 <%end %><br><br>
 Joined By: <% if @workout.user_id == @workout.amigo_id %>
   <%= 'No workout partner yet.' %>

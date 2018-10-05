@@ -1,10 +1,11 @@
 <br>
 <div class="upcoming_body">
 <% @workouts.each do |workout| %>
-
-  <div class="gym-info"><%= link_to workout.description, workout_path(workout) %></div><br>
-  with: <div class="gym-info"><%=workout.amigo.username%></div><br>
-  on: <div class="gym-info"><%=workout.date%></div>
-<% end %>
 <br>
+  <div class="gym-info"><%= link_to workout.description, workout_path(workout) %></div><br>
+  amigos: <div class="gym-info"><%=workout.amigo.username%> & <%=workout.user.username%></div><br>
+  on: <div class="gym-info"><%=workout.date%></div>
+  __________________________________________
+<% end %>
 </div>
+<br>

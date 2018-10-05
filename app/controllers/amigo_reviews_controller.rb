@@ -15,6 +15,8 @@ class AmigoReviewsController < ApplicationController
 
 
 
+
+
   private
 
   def amigo_review_params

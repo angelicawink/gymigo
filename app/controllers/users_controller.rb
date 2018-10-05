@@ -52,6 +52,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def reviews
+    @user = User.find(params[:id])
+    render :reviews
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :city, :experience, :goals, :password, :password_confirmation)

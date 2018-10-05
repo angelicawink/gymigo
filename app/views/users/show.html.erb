@@ -1,0 +1,19 @@
+<div class="whole_page">
+  <br>
+  <div class="page_header"
+  <h1><%=@user.username%>'s Profile</h1></div>
+        <br>
+
+          <br>
+          <div class="body">
+          username: <div class="profile_data"><%= @user.username %></div><br>
+          city: <div class="profile_data"><%= @user.city %></div><br>
+
+         experience level: <div class="profile_data"><%= @user.experience %></div><br>
+          goals: <div class="profile_data"><%= @user.goals %></div><br>
+
+</div>
+<div class="return_link">
+<%= link_to "view #{@user.username}'s reviews'", reviews_path(@user)%>
+
+</div>

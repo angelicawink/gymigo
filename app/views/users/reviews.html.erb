@@ -1,0 +1,16 @@
+<br>
+<div class="review_header"><%= @user.username%>'s Reviews</div><br>
+<br><br>
+<div class="review_body">
+<% if @user.reviews%>
+<% @user.reviews.each do |review|%>
+<br>
+rating: <div class="review_info"><%= review.rating%></div><br>
+comment: <div class="review_info"><%= review.description%></div><br>
+reviewed by: <div class="review_info"><%=review.user.username%></div><br>
+<br><%end%>
+<% end %>
+</div>
+</div>
+<div class="return_link">
+<%= link_to "return to workouts", join_workout_path%>
