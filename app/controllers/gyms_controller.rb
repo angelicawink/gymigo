@@ -24,6 +24,10 @@ class GymsController < ApplicationController
     render :index
   end
 
+  def gym_show_reviews
+    @gym = Gym.find(params[:id])
+  end 
+
   private
   def require_login
     return head(:forbidden) unless session.include? :user_id

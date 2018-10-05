@@ -34,4 +34,6 @@
 #
 # Workout.create(start_time: "3:00 PM", end_time: "5:00 PM", description: "interested in learning some new ab exercises", gym_id:1, user_id:2, amigo_id: 2, status: "requested", date: "12/20/18")
 # #
-# GymReview.create(user_id: 2, gym_id: 4, rating: 4, description: "clean and organized! wish they had towels :/", workout_id: 5)
+GymReview.create(user_id: 2, gym_id: 4, rating: 4, description: "clean and organized! wish they had towels :/", workout_id: 5)
+
+GymReview.create(user_id: 2, gym_id: 4, rating: 4, description: "Fun and good music! Weights are rusty though.", workout_id: 5)

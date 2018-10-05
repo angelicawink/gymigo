@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   resources :gyms, only: [:index, :show]
   get '/search', to: 'gyms#search'
 
+  get '/gym_show_reviews/:id', to: 'gyms#gym_show_reviews', as: :gym_show_reviews
+
   resources :gym_reviews
 
 

@@ -1,0 +1,23 @@
+<br>
+<div class="container">
+  <h1 class="gym_header">
+    <div class="text-warning">
+      <%= @gym.name %><br>Reviews<br>
+      <!-- <div class="gym-address">
+        <%= @gym.address + ", " + @gym.city + " " + @gym.zipcode%>
+      </div> -->
+    </div>
+  </h1>
+
+  <p><div class="gym_body">
+    <br>
+    <!-- OPEN: <div class="gym-info"><%= @gym.hours%></div><br>
+
+    RATES: <div class="gym-info"><%= @gym.rates%></div><br> -->
+    <% number = 1 %>
+    <% @gym.gym_reviews.each do |review| %>
+      <a href="<%=gym_review_path(review)%>" class="btn btn-danger">Review<%=' ' + number.to_s%></a><br><br>
+      <% number += 1 %>
+    <% end %>
+  </div>
+</div>

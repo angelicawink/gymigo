@@ -7,5 +7,7 @@
 OPEN: <div class="gym-info"><%= @gym.hours%></div><br>
 
   RATES: <div class="gym-info"><%= @gym.rates%></div><br>
+
+  <a href="<%=gym_show_reviews_path(@gym)%>" method="post" class="btn btn-danger">Reviews</a>
 </div>
 </div>
