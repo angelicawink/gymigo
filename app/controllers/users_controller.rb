@@ -5,11 +5,14 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    byebug
   end
 
   def create
+
     @user = User.create(user_params)
     if @user.save
+      byebug
       redirect_to profile_path(@user)
     else
       render :new
@@ -32,6 +35,7 @@ class UsersController < ApplicationController
   end
 
   def profile
+    
     @user = User.find(params[:id])
   end
 
