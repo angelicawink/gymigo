@@ -1,13 +1,22 @@
 <div class = "whole_page">
   <br>
 <div class = "page_header"><h2>Workouts Seeking a Partner<h2></div><br><br>
-<% @workouts.each do |workout| %>
-<div class="workout">
-  <div class="workout_header"><%=workout.date%>: <%= link_to workout.description, workout_path(workout) %> </div></div><br>
+<% joinables = @workouts.select do |workout| %>
+<% workout.user_id != session[:user_id]%>
+<%end%>
+<% if !joinables.empty? %>
+<%joinables.each do |workout|%>
+  <div class="workout_header"><%=workout.date%>: <%= link_to workout.description, workout_path(workout) %>
+<%end%>
+<%end%>
+  </div></div><br>
 
 
 </div>
-</div><br><br>
+</div><br>
 
-<% end %>
+<% if joinables.empty?%>
+<div class="workout_header"><%= "No workouts seeking a partner at the moment :/"%><br>
+<%= "Create one!"%></div>
+<% end%>
 </div>

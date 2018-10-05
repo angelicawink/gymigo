@@ -3,7 +3,7 @@
 <div class = "page_header"><h2>My Completed Workouts<h2></div><br><br>
 <% @workouts.each do |workout| %>
 <div class="body">
-  <div class="workout_header"><%=workout.date%>: <%= link_to workout.description, workout_path(workout) %> </div><br>
+  <div class="completed_header"><%=workout.date%>: <%= link_to workout.description, workout_path(workout) %> </div><br>
   <div class="review_form">
     <%= form_tag("/gym_reviews") do %>
       <input type="hidden" name="gym_review[gym_id]" value="<%=workout.gym_id%>">

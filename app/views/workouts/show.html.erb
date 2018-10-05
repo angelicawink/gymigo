@@ -1,27 +1,29 @@
 <br>
 <div class="workout_show">
-Start Time:<%= @workout.start_time %><br><br>
-End Time: <%= @workout.end_time %><br><br>
-Gym: <%= @workout.gym.name %><br><br>
-Gym Address: <%= @workout.gym.address %><br><br>
-Workout Description: <%= @workout.description %><br><br>
-Workout Status: <%= @workout.status %><br>
+Date: <div class="gym-info"><%= @workout.date %></div><br>
+
+Start Time:<div class="gym-info"><%= @workout.start_time %></div><br>
+End Time: <div class="gym-info"><%= @workout.end_time %></div><br>
+Gym: <div class="gym-info"><%= @workout.gym.name %></div><br>
+Gym Address: <div class="gym-info"><%= @workout.gym.address %></div><br>
+Workout Description: <div class="gym-info"><%= @workout.description %></div><br>
+Workout Status: <div class="gym-info"><%= @workout.status %></div>
 <% if @workout.status == 'booked' || @workout.status == "requested"%>
-<%= button_to "completed workout!", complete_workout_path(@workout)%>
+<%= button_to "I completed this workout!", complete_workout_path(@workout)%>
 <% end%>
 <br>
 Created By:
  <% if @workout.user_id == session[:user_id]%>
-<%= "Me" %>
+<div class="gym-info"><%= "Me" %></div>
 <% else%>
-<%= link_to @workout.user.username, user_path(@workout.user) %>
-<%end %><br><br>
+<div class="gym-info"><%= link_to @workout.user.username, user_path(@workout.user) %></div>
+<%end %><br>
 Joined By: <% if @workout.user_id == @workout.amigo_id %>
-  <%= 'No workout partner yet.' %>
+  <div class="gym-info"><%= 'No workout partner yet.' %></div>
   <% elsif @workout.amigo_id == session[:user_id] %>
-  <%= 'Me'%>
+  <div class="gym-info"><%= 'Me'%></div>
   <% else %>
-  <%= @workout.amigo.username %><br><br>
+  <div class="gym-info"><%= @workout.amigo.username %></div><br>
   <% end %>
 <% if @workout.user_id == @workout.amigo_id && @workout.user_id != session[:user_id] %>
     <%= button_to 'Join Workout', book_workout_path(@workout)%>

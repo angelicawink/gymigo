@@ -1,6 +1,6 @@
 <br>
 <div class="review_header"><%=@gym_review.gym.name%><br> Review</div>
-<br><br><br><br>
+<br><br>
 <div class="review_body"><br>
 reviewed by: <div class="review_info"><%= @gym_review.user.username%></div><br><br>
 <% if @gym_review.rating %>
@@ -11,6 +11,3 @@ comment: <div class="review_info"><%= @gym_review.description%></div>
 <% end %>
 <br><br>
 <div class="return_link">
-
-<%= link_to "return to my completed workouts", completed_path%></div>
-</div>

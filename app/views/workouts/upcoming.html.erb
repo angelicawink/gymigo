@@ -1,11 +1,12 @@
 <br>
 <div class="upcoming_body">
+  <div class="gym-info">MY UPCOMING WORKOUTS!</div>
 <% @workouts.each do |workout| %>
+__________________________________________
 <br>
   <div class="gym-info"><%= link_to workout.description, workout_path(workout) %></div><br>
   amigos: <div class="gym-info"><%=workout.amigo.username%> & <%=workout.user.username%></div><br>
   on: <div class="gym-info"><%=workout.date%></div>
-  __________________________________________
 <% end %>
 </div>
 <br>

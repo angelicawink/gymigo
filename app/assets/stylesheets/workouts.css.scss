@@ -62,13 +62,68 @@ h6{
 
 
 .workout_header{
+  display: inline-block;
+  margin-left: 30%;
+  margin-right: auto;
+  align-items: center;
+  padding: 0.8em 0.8em 0.8em 0.8em;
+  justify-content: center;
   font-size: 20px;
   background-color: white;
-  color: #ffc107;
+  color: crimson;
   border-radius: 30px;
-  padding: 8px 8px 8px 8px;
   text-align: center;
   width: auto;
+  border-style: solid;
+    border-width: 5px;
+    border-color: #ffc107;
+}
+
+.awaiting_header{
+  display: inline-block;
+  margin-left: 27%;
+  margin-right: auto;
+  align-items: center;
+  padding: 0.8em 0.8em 0.8em 0.8em;
+  justify-content: center;
+  font-size: 20px;
+  background-color: crimson;
+  color: #ffc107;
+  border-radius: 30px;
+  text-align: center;
+  width: auto;
+}
+
+.completed_header{
+  display: inline-block;
+  margin-left: 30%;
+  margin-right: auto;
+  align-items: center;
+  padding: 0.8em 0.8em 0.8em 0.8em;
+  justify-content: center;
+  font-size: 20px;
+  background-color: white;
+  color: crimson;
+  border-radius: 30px;
+  text-align: center;
+  width: auto;
+}
+
+.awaiting_body{
+  display: inline-block;
+  align-items: center;
+  margin-left: 30%;
+  padding: 0.8em 0.8em 0.8em 0.8em;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #ffc107;
+  color: crimson;
+  border-radius: 30px;
+  text-align: center;
+  width: auto;
+  border-style: solid;
+    border-width: 5px;
+    border-color: crimson;
 }
 
 .review_form{
@@ -192,8 +247,9 @@ a{
 
 .upcoming_body{
     // display:inline;
-    display: center;
-    padding: 0.5em 0.2em 0.5em;
+    display: inline-block;
+    margin-left: 30%;
+    padding: 0.8em 0.8em 0.8em 0.8em;
     border-radius: 30px;
     background-color: #ffc107;
     text-align: center;
@@ -202,36 +258,54 @@ a{
     font-size: 15px;
     width: 40%;
     margin: 30px;
+    border-style: solid;
+      border-width: 5px;
+      border-color: crimson;
 }
 
 .workout_show{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
   background-color: #ffc107;
-  width: auto;
-  display: center;
+  margin-left: 30%;
   border-radius: 30px;
   padding: 1em 1em 1em 1em;
   font-family: "Andale Mono";
+  text-align: center;
 
 }
 
 .review_header{
-  position: absolute;
-    display: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+    width: 50%;
+    height: 50%;
     padding: 0.4em 0.6em 0.4em 0.6em;
     border-radius: 30px;
     background-color: crimson;
     text-align: center;
     color:gold;
     font-family: "Andale Mono";
-    width: auto;
     font-size: 25px;
-    left: 45%
 }
 
 .review_body{
     // display:inline;
-    position: absolute;
-    display: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+    width: 50%;
+    height: 50%;
     padding: 0.5em 0.2em 0.5em;
     border-radius: 30px;
     background-color: #ffc107;
@@ -239,8 +313,7 @@ a{
     color:black;
     font-family: "Andale Mono";
     font-size: 15px;
-    width: 300px;
-    left: 45%
+
 }
 
 .return_link{
@@ -265,3 +338,21 @@ a{
   font-size: 20px;
   color: crimson;
 }
+
+.gym_search_text{
+  font-size: 20px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 0.5em 0.5em;
+  width: auto;
+}
+
+.search_bar{
+  font-size: 14px;
+  width: auto;
+}
+
+ .new_workout{
+   padding: 0.5em 0.2em 0.5em;
+   font-family: "Andale mono";
+ }
