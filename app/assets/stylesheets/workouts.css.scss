@@ -210,5 +210,56 @@ a{
   display: center;
   border-radius: 30px;
   padding: 1em 0.2em 0.5em;
+}
 
+.review_header{
+  position: absolute;
+    display: center;
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    border-radius: 30px;
+    background-color: crimson;
+    text-align: center;
+    color:gold;
+    font-family: "Andale Mono";
+    width: auto;
+    font-size: 25px;
+    left: 45%
+}
+
+.review_body{
+    // display:inline;
+    position: absolute;
+    display: center;
+    padding: 0.5em 0.2em 0.5em;
+    border-radius: 30px;
+    background-color: #ffc107;
+    text-align: center;
+    color:black;
+    font-family: "Andale Mono";
+    font-size: 15px;
+    width: 300px;
+    left: 45%
+}
+
+.return_link{
+    // display:inline;
+    display: center;
+    padding: 0.5em 0.2em 0.5em;
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+    color:black;
+    font-family: "Andale Mono";
+    font-size: 12px;
+    width: auto;
+    margin: 30px;
+    position: absolute;
+
+
+
+
+}
+.review_info{
+  font-size: 20px;
+  color: crimson;
 }

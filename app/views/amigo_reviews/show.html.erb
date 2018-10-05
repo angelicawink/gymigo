@@ -1,7 +1,14 @@
-<%= @amigo_review.amigo.username.upcase%> REVIEW<br><br>
-
-reviewed by: <%= @amigo_review.user.username%><br>
-rating: <%= @amigo_review.rating%><br>
-comments: <%= @amigo_review.description%><br><br>
-
-<%= link_to "return to my completed workouts", completed_path%>
+<br>
+<div class="review_header"><%= @amigo_review.amigo.username.upcase%> REVIEW</div><br><br>
+<br>
+<div class="review_body"><br>
+reviewed by: <div class="review_info"><%= @amigo_review.user.username%></div><br><br>
+<% if @amigo_review.rating %>
+rating: <div class="review_info"><%= @amigo_review.rating%></div><br><br>
+<% end%>
+<% if !@amigo_review.description.empty?%>
+comments: <div class="review_info"><%= @amigo_review.description%></div><br><br>
+<% end%></div>
+<div class="return_link">
+<%= link_to "return to completed workouts", completed_path%>
+</div>
